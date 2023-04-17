@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                box-sizing: border-box;
+                overflow: hidden;
+            }
+            body {
+                background-color: white;
+                font-family: Arial, sans-serif;
+                overflow: hidden;
+                padding: 5px 5px;
+            }
+            h3, h4 {
+                margin: 0;
+            }
+            #h4 {
+                line-height: 30px;
+                font-size: 12px;
+            }
+            button {
+                all: unset;
+                padding: 3px 5px;
+                width: fit-content;
+                background-color: rgb(168, 168, 168);
+            }
+            /* td {
+                background-color: beige;
+            } */
+        </style>
+    </head>
+
+    <body>
+        <table style="border-spacing: 10px; border-collapse: separate;">
+            <tr>
+              <td><button onclick="location.href='button://get_window'">Encontrar</button></td>
+              <td><h4 style="width: 300px; display: block; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;" id="h4">Nenhuma janela selecionada !</h4></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: left;"><button id="top" onclick="location.href='button://on_top'">Colocar no topo</button></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: left;"><p style="margin: 0;">Transparência</p></td>
+              </tr>
+            <tr>
+                <td>
+                    <div style="display: inline-block">
+                        <span style="display: inline-block"><button onclick="location.href='button://decrease'" style="width: 30px; height: 30px; border-radius: 15px; text-align: center;">-</button></span>
+                        <span style="display: inline-block"><p id="transparency-value" style="margin: 0; line-height: 35px;">100%</p></span>
+                        <span style="display: inline-block"><button onclick="location.href='button://increase'" style="width: 30px; height: 30px; border-radius: 15px; text-align: center;">+</button></span>
+                    </div>
+                </td>
+            </tr>
+          </table>
+    </body>
+</html>
